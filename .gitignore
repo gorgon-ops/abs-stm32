@@ -1,0 +1,11 @@
+build/
+*.o
+*.exe
+
+# STM32CubeIDE
+Debug/
+Release/
+.settings/
+.cproject
+.project
+*.launch
