@@ -169,11 +169,8 @@ make
 Needs only a C compiler. The firmware is built by STM32CubeIDE from
 `firmware/abs_node/`.
 
-## Next
+## Limitations
 
-- Hardware bring-up
-- Replace the plant's assumed inertia and brake constant with measured values
-  from a spin-down test, and re-check the tuning against them
-- Capture real telemetry and overlay it on the simulated trace
-- A commanded-torque brake would remove the low-μ limitation entirely; worth
-  trying before adding complexity to the controller to work around it
+Simulation only so far: the plant's inertia and brake constant are assumed, not
+measured on the rig. On low-μ surfaces the modulator abdicates rather than
+regulate (see the table above); a commanded-torque brake would remove that limit.
